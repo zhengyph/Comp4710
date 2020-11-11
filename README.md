@@ -25,7 +25,7 @@ Note: We better can generate conclusions from each pattern/relation.<br>
 2. How many ranks do IT jobs have? What is the relation between rank/required exp, rank/salary, rank/required edu?<br>
 3. What is the relation between salary and experience/job level/education?<br>
 4. Consider all other factors are same, how much does the geographic factor will affect the salary?<br>
-5. Among all jobs posted by Canadian government, how many % of them are IT related?<br>
+5. Among all jobs posted by Canadian government, how many % of them are IT related? Is it showing a growth or decline?<br>
 6. How did the COVID affect the IT job market? What were changed between before/after the outbreak?<br>
 7. How many IT jobs of all allows remote work? What about comparing with other kind of jobs?<br>
 etc. need update<br>
