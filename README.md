@@ -32,3 +32,4 @@ Note: We better can generate conclusions from each pattern/relation.<br>
 9. Mining the frequent patterns with all factors above? (not a 1-to-1 relationship)
 etc. need update<br>
 
+
