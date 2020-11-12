@@ -5,11 +5,13 @@ import requests
 import datetime
 import concurrent.futures
 import re
-BASE_URL = 'https://www.itjobs.ca/en/'
+import sys
+EXTRA_POSTINGS = '--extra' in sys.argv
+BASE_URL = 'https://www.jobs.ca/search/' if EXTRA_POSTINGS else 'https://www.itjobs.ca/en/'
 SORT_ORDER = 1      # sort by: date
 
 def generate_query_params(sort_order: int, page: int) -> str:
-    return f'?sort_order={sort_order}&page={page}'
+    return f'?{"keywords=Information+Technology&" if EXTRA_POSTINGS else ""}sort_order={sort_order}&page={page}'
 
 def get_page_data(page: int):
     r = requests.get(BASE_URL + generate_query_params(SORT_ORDER, page))
