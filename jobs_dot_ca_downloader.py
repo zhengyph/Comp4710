@@ -5,9 +5,25 @@ import requests
 import datetime
 import concurrent.futures
 import re
-import sys
-EXTRA_POSTINGS = '--extra' in sys.argv
-BASE_URL = 'https://www.jobs.ca/search/' if EXTRA_POSTINGS else 'https://www.itjobs.ca/en/'
+urls = {
+    'Human Resources': 'https://www.hrjob.ca',
+    'Finance': 'https://www.jobwings.ca/en/',
+    'Project Management': 'https://www.pmjobs.ca/',
+    'Legal': 'https://www.legaljobs.ca/',
+    'Paralegal': 'https://www.paralegaljobs.ca/',
+    'Sales': 'https://www.salesrep.ca/en/',
+    'Information Technology': 'https://www.itjobs.ca/en/',
+    'Retail': 'https://www.retail.ca/',
+    'Call Centre': 'https://www.callcentrejob.ca/',
+    'Administative': 'https://www.adminjobs.ca/en/',
+    'Engineering': 'https://www.techjobs.ca/en/',
+    'Accounting': 'https://www.accountingjobs.ca/',
+    'Business Analyst': 'https://www.bajobs.ca/en/',
+    'Pharmaceutical': 'https://www.pharmaceutical.ca/',
+    'Healthcare': 'https://www.healthcarejobs.ca/',
+    'Aeronautical': 'https://www.aerojobs.ca/en/',
+    'Hospitality': 'https://www.hospitalityjobs.ca/en/',
+}
 SORT_ORDER = 1      # sort by: date
 
 def generate_query_params(sort_order: int, page: int) -> str:
@@ -18,9 +34,9 @@ def generate_query_params(sort_order: int, page: int) -> str:
     :param page: Page number
     :return: String of query parameters
     """
-    return f'?{"keywords=Information+Technology&" if EXTRA_POSTINGS else ""}sort_order={sort_order}&page={page}'
+    return f'?sort_order={sort_order}&page={page}'
 
-def get_page_data(page: int):
+def get_page_data(category: str, page: int):
     """
     Gets and parses all the information on a page.
 
@@ -29,10 +45,10 @@ def get_page_data(page: int):
         job title, company, location, and link, populated with
         the data from the page.
     """
-    r = requests.get(BASE_URL + generate_query_params(SORT_ORDER, page))
+    r = requests.get(urls[category] + generate_query_params(SORT_ORDER, page))
     soup = BeautifulSoup(r.text, 'html.parser')
     page_data = []
-    print('Parsing page {}'.format(page))
+    print('Loading {} page {}'.format(category, page))
     # Loop for all results on the page
     for posting in soup.find_all('div', {'class': 'result-item'}):
         posting = posting.find('div', {'class': 'result-info-wrapper'})
@@ -55,6 +71,7 @@ def get_page_data(page: int):
             "job_title": job_title,
             "company": company,
             "location": location,
+            "category": category,
             "link": link,
         }
         page_data.append(row_info)
@@ -62,28 +79,37 @@ def get_page_data(page: int):
     page_data = pd.DataFrame(page_data)
     return page_data
 
-# initial request, get the number of pages
-r = requests.get(BASE_URL + generate_query_params(SORT_ORDER, 1))
-soup = BeautifulSoup(r.text, 'html.parser')
-# find the last page number
-num_pages = soup.find('div', {"class": "pager-numbers"}).findAll('a')[-1].string
-num_pages = int(num_pages)
-print('Total number of pages: {}'.format(num_pages))
+def get_num_pages(category: str):
+    print(f"Getting number of pages for {category}")
+    # initial request, get the number of pages
+    r = requests.get(urls[category] + generate_query_params(SORT_ORDER, 1))
+    soup = BeautifulSoup(r.text, 'html.parser')
+    # find the last page number
+    num = soup.find('div', {"class": "pager-numbers"}).findAll('a')[-1].string
+    return int(num)
+
 # start with an empty data frame
 data_frame = pd.DataFrame()
-
 # start the thread pool
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    # submit all the pages to the queue
-    page_data = {executor.submit(get_page_data, page_num): page_num for page_num in range(1, num_pages+1)}
+    category_numbers = {executor.submit(get_num_pages, category): category for category in urls.keys()}
+
+    page_data = dict()
+    for future in concurrent.futures.as_completed(category_numbers):
+        category = category_numbers[future]
+        num_pages = future.result()
+        print(f'Number of pages for {category}: {num_pages}')
+        for num in range(1, num_pages+1):
+            page_data[executor.submit(get_page_data, category, num)] = f"{category} page {num}"
+
     # Process each request as they are created
     for future in concurrent.futures.as_completed(page_data):
-        page_num = page_data[future]
-        print('Processing page {}'.format(page_num))
+        page_identifier = page_data[future]
+        print('Processing {}'.format(page_identifier))
         try:
             data = future.result()
         except Exception as exc:
-            print('Page %r generated an exception: %s' % (page_num, exc))
+            print('%r generated an exception: %s' % (page_identifier, exc))
         else:
             # combine the dataframe together
             data_frame = pd.concat([data_frame, data])
