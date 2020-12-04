@@ -3,7 +3,8 @@ import numpy as np
 
 # Load data from csv file
 def load_data_set():
-    data_set = pd.read_csv("out.csv", usecols=["job_title","company","location","category"])
+    data_set = pd.read_csv("out.csv", usecols=[
+                           "job_title", "company", "location", "category"])
 
     return data_set
 
@@ -16,9 +17,9 @@ def generate_C1(data_set):
             item_set = frozenset([item])
             C1.add(item_set)
 
-    return C1; 
+    return C1;
 
-# Prune candidates   
+# Prune candidates
 def prune(Ck_item, LkSub1):
     for item in Ck_item:
         sub_Ck = Ck_item - frozenset([item])
@@ -38,7 +39,7 @@ def generate_Ck(LkSub1, k):
             l1.sort()
             l2.sort()
             if l1[0:k-2] == l2[0:k-2]:
-               Ck_item = list_LkSub1[i] |  list_LkSub1[j]
+               Ck_item = list_LkSub1[i] | list_LkSub1[j]
                if not prune(Ck_item, LkSub1):
                   Ck.add(Ck_item)
     return Ck
@@ -46,7 +47,7 @@ def generate_Ck(LkSub1, k):
 # Generate Lk by Ck
 def generate_Lk_by_Ck(data_set, Ck, min_support, support_data):
     Lk = set()
-    item_count ={}
+    item_count = {}
     data_set = np.array(data_set)
 
     for t in data_set:
@@ -56,13 +57,13 @@ def generate_Lk_by_Ck(data_set, Ck, min_support, support_data):
                   item_count[item] = 1;
                else:
                   item_count[item] += 1;
-    
-    t_num = float(len(data_set)) 
+
+    t_num = float(len(data_set))
 
     for item in item_count:
         if (item_count[item] / t_num) >= min_support:
             Lk.add(item)
-            support_data[item] = item_count[item]/t_num
+            support_data[item] = item_count[item] / t_num
     return Lk
 
 # Generate all frequent itemsets
@@ -80,10 +81,26 @@ def generate_L(data_set, k, min_support):
         L.append(LkSub1)
     return L, support_data
 
+# Generate association rules
+def generate_assoc_rules(L, support_data, min_conf):
+        assoc_rules_list = []
+        sub_set_list = []
+        for i in range(0, len(L)):
+            for freq_set in L[i]:
+                for sub_set in sub_set_list:
+                    if sub_set.issubset(freq_set):
+                        conf = support_data[freq_set] / support_data[freq_set - sub_set]
+                        assoc_rule = (freq_set - sub_set, sub_set, conf)
+                        if (conf >= min_conf) and (assoc_rule not in assoc_rules_list):
+                            assoc_rules_list.append(assoc_rule)
+                sub_set_list.append(freq_set)
+        return assoc_rules_list
+
+# Main
 if __name__ == '__main__':
     data_set = load_data_set()
     L, support_data = generate_L(data_set, k=3, min_support=0.01)
-
+    assoc_rules_list = generate_assoc_rules(L, support_data, min_conf = 0.5)
 
     if len(list(L)) > 0:
         for Lk in L:
@@ -94,4 +111,10 @@ if __name__ == '__main__':
                 for freq_set in Lk:
                     print(freq_set, support_data[freq_set])
             else:
-                print("Null")
+                print("Null") 
+        print('\n'+"Association Rules")
+        if len(assoc_rules_list) > 0:
+            for item in assoc_rules_list:
+                print(item[0], "=>", item[1], "conf = ", item[2])
+        else:
+            print("Null")
