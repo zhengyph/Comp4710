@@ -1,0 +1,123 @@
+==================================================
+frequent 1-itemsets		support
+==================================================
+frozenset({'Extendicare Canada Inc.'}) 0.019092279350192597
+frozenset({'Montreal, QC'}) 0.04262267626863172
+frozenset({'Information Technology'}) 0.09881091944397924
+frozenset({'Business Analyst'}) 0.010048568079048735
+frozenset({'Healthcare'}) 0.30154078043878746
+frozenset({'Registered Nurse'}) 0.010969686819628203
+frozenset({'Edmonton, AB'}) 0.019427231619494223
+frozenset({'Saskatoon, SK'}) 0.02009713615809747
+frozenset({'Retail'}) 0.10584491709931335
+frozenset({'Regina, SK'}) 0.012560710098810919
+frozenset({'Health Sciences Centre'}) 0.01297940043543795
+frozenset({'Toronto, ON'}) 0.14570423714620667
+frozenset({'Deloitte Canada'}) 0.04622341316362418
+frozenset({'Winnipeg, MB'}) 0.04672584156757662
+frozenset({'Nova Scotia Health Authority'}) 0.025288896332272652
+frozenset({'Shared Health'}) 0.010718472617651985
+frozenset({'Bell'}) 0.01214201976218389
+frozenset({'Mississauga, ON'}) 0.030815608775749456
+frozenset({'Surrey, BC'}) 0.011053424886953609
+frozenset({'Pharmaceutical'}) 0.032825322391559206
+frozenset({'Human Resources'}) 0.025707586668899683
+frozenset({'T&T Supermarket'}) 0.011723329425556858
+frozenset({'Project Management'}) 0.01725004186903366
+frozenset({'Markham, ON'}) 0.01406799531066823
+frozenset({'CBI Health Group'}) 0.044381175682465246
+frozenset({'London Drugs'}) 0.03115056104505108
+frozenset({'Richmond, BC'}) 0.010467258415675766
+frozenset({'Sales'}) 0.08214704404622342
+frozenset({'BC Liquor Stores'}) 0.03952436777759169
+frozenset({'Engineering'}) 0.12468598224752973
+frozenset({'Victoria, BC'}) 0.012476972031485513
+frozenset({'Finance'}) 0.06590185898509462
+frozenset({'Accounting'}) 0.012560710098810919
+frozenset({'Ottawa, ON'}) 0.03424886953609111
+frozenset({'Halifax, NS'}) 0.016580137330430414
+frozenset({'Burnaby, BC'}) 0.011304639088929827
+frozenset({'LifeLabs'}) 0.0491542455200134
+frozenset({'Health Careers in Saskatchewan'}) 0.09253056439457377
+frozenset({'Sales Associate (sr - Seasonal)'}) 0.01725004186903366
+frozenset({'University Health Network'}) 0.027214871880756993
+frozenset({'Safeway'}) 0.01800368447496232
+frozenset({'Calgary, AB'}) 0.030396918439122424
+frozenset({'Aeronautical'}) 0.011137162954279016
+frozenset({'Hospitality'}) 0.06439457377323732
+frozenset({'Vancouver, BC'}) 0.056523195444649135
+frozenset({'Administative'}) 0.022860492379835874
+frozenset({'Tommy Hilfiger'}) 0.012728186233461732
+frozenset({'Langley, BC'}) 0.010132306146374141
+frozenset({'Scotiabank'}) 0.0450510802210685
+frozenset({'Sales Associate'}) 0.014821637916596886
+frozenset({'Call Centre'}) 0.01967844582147044
+==================================================
+frequent 2-itemsets		support
+==================================================
+frozenset({'Toronto, ON', 'University Health Network'}) 0.026628705409479148
+frozenset({'Toronto, ON', 'Healthcare'}) 0.044046223413163624
+frozenset({'Winnipeg, MB', 'Healthcare'}) 0.0314017752470273
+frozenset({'Health Sciences Centre', 'Winnipeg, MB'}) 0.01297940043543795
+frozenset({'Saskatoon, SK', 'Health Careers in Saskatchewan'}) 0.0123094958968347
+frozenset({'Saskatoon, SK', 'Healthcare'}) 0.01448668564729526
+frozenset({'Pharmaceutical', 'LifeLabs'}) 0.015407804387874728
+frozenset({'Sales', 'BC Liquor Stores'}) 0.014235471445319042
+frozenset({'Information Technology', 'Deloitte Canada'}) 0.013900519176017418
+frozenset({'University Health Network', 'Healthcare'}) 0.021855635571931
+frozenset({'Finance', 'Toronto, ON'}) 0.025205158264947247
+frozenset({'Health Careers in Saskatchewan', 'Healthcare'}) 0.0792162116898342
+frozenset({'Health Sciences Centre', 'Healthcare'}) 0.010718472617651985
+frozenset({'Extendicare Canada Inc.', 'Healthcare'}) 0.01666387539775582
+frozenset({'LifeLabs', 'Toronto, ON'}) 0.013398090772064981
+frozenset({'Registered Nurse', 'Healthcare'}) 0.010969686819628203
+frozenset({'Deloitte Canada', 'Toronto, ON'}) 0.01858985094624016
+frozenset({'Finance', 'Scotiabank'}) 0.016328923128454194
+frozenset({'Retail', 'London Drugs'}) 0.01967844582147044
+frozenset({'Information Technology', 'Toronto, ON'}) 0.027633562217384024
+frozenset({'Information Technology', 'Montreal, QC'}) 0.01574275665717635
+frozenset({'BC Liquor Stores', 'Sales Associate (sr - Seasonal)'}) 0.01725004186903366
+frozenset({'LifeLabs', 'Healthcare'}) 0.02939206163121755
+frozenset({'Vancouver, BC', 'Healthcare'}) 0.012393233964160108
+frozenset({'Toronto, ON', 'Scotiabank'}) 0.023697873053089933
+frozenset({'Healthcare', 'CBI Health Group'}) 0.03902193937363926
+frozenset({'Retail', 'BC Liquor Stores'}) 0.024200301457042373
+frozenset({'Nova Scotia Health Authority', 'Healthcare'}) 0.02160442136995478
+frozenset({'Deloitte Canada', 'Finance'}) 0.023697873053089933
+==================================================
+frequent 3-itemsets		support
+==================================================
+frozenset({'University Health Network', 'Toronto, ON', 'Healthcare'}) 0.021353207167978564
+frozenset({'Finance', 'Toronto, ON', 'Scotiabank'}) 0.011220901021604422
+frozenset({'Healthcare', 'Health Sciences Centre', 'Winnipeg, MB'}) 0.010718472617651985
+frozenset({'Saskatoon, SK', 'Health Careers in Saskatchewan', 'Healthcare'}) 0.011220901021604422
+
+Association Rules
+frozenset({'University Health Network'}) => frozenset({'Toronto, ON'}) conf =  0.9784615384615384
+frozenset({'Winnipeg, MB'}) => frozenset({'Healthcare'}) conf =  0.6720430107526882
+frozenset({'Health Sciences Centre'}) => frozenset({'Winnipeg, MB'}) conf =  1.0
+frozenset({'Saskatoon, SK'}) => frozenset({'Health Careers in Saskatchewan'}) conf =  0.6124999999999999
+frozenset({'Saskatoon, SK'}) => frozenset({'Healthcare'}) conf =  0.7208333333333333
+frozenset({'University Health Network'}) => frozenset({'Healthcare'}) conf =  0.8030769230769231
+frozenset({'Health Careers in Saskatchewan'}) => frozenset({'Healthcare'}) conf =  0.8561085972850678
+frozenset({'Health Sciences Centre'}) => frozenset({'Healthcare'}) conf =  0.8258064516129032
+frozenset({'Extendicare Canada Inc.'}) => frozenset({'Healthcare'}) conf =  0.8728070175438596
+frozenset({'Registered Nurse'}) => frozenset({'Healthcare'}) conf =  1.0
+frozenset({'London Drugs'}) => frozenset({'Retail'}) conf =  0.6317204301075269
+frozenset({'Sales Associate (sr - Seasonal)'}) => frozenset({'BC Liquor Stores'}) conf =  1.0
+frozenset({'LifeLabs'}) => frozenset({'Healthcare'}) conf =  0.5979557069846678
+frozenset({'Scotiabank'}) => frozenset({'Toronto, ON'}) conf =  0.5260223048327137
+frozenset({'CBI Health Group'}) => frozenset({'Healthcare'}) conf =  0.879245283018868
+frozenset({'BC Liquor Stores'}) => frozenset({'Retail'}) conf =  0.6122881355932204
+frozenset({'Nova Scotia Health Authority'}) => frozenset({'Healthcare'}) conf =  0.8543046357615893
+frozenset({'Deloitte Canada'}) => frozenset({'Finance'}) conf =  0.5126811594202898
+frozenset({'Toronto, ON', 'University Health Network'}) => frozenset({'Healthcare'}) conf =  0.8018867924528302
+frozenset({'Healthcare', 'University Health Network'}) => frozenset({'Toronto, ON'}) conf =  0.9770114942528736
+frozenset({'University Health Network'}) => frozenset({'Toronto, ON', 'Healthcare'}) conf =  0.7846153846153846
+frozenset({'Finance', 'Scotiabank'}) => frozenset({'Toronto, ON'}) conf =  0.6871794871794873
+frozenset({'Health Sciences Centre', 'Winnipeg, MB'}) => frozenset({'Healthcare'}) conf =  0.8258064516129032
+frozenset({'Health Sciences Centre', 'Healthcare'}) => frozenset({'Winnipeg, MB'}) conf =  1.0
+frozenset({'Health Sciences Centre'}) => frozenset({'Winnipeg, MB', 'Healthcare'}) conf =  0.8258064516129032
+frozenset({'Saskatoon, SK', 'Health Careers in Saskatchewan'}) => frozenset({'Healthcare'}) conf =  0.9115646258503401
+frozenset({'Saskatoon, SK', 'Healthcare'}) => frozenset({'Health Careers in Saskatchewan'}) conf =  0.7745664739884394
+frozenset({'Saskatoon, SK'}) => frozenset({'Health Careers in Saskatchewan', 'Healthcare'}) conf =  0.5583333333333333

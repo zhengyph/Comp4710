@@ -1,0 +1,156 @@
+==================================================
+frequent 1-itemsets		support
+==================================================
+frozenset({'Pursuit Collection'}) 0.03125
+frozenset({'Construction'}) 0.10416666666666667
+frozenset({'Toronto, ON'}) 0.11458333333333333
+frozenset({'Mountain Equipment Co-op'}) 0.07291666666666667
+frozenset({'Nutrition Aide (Food Delivery)'}) 0.03125
+frozenset({'Vancouver, BC'}) 0.10416666666666667
+frozenset({'BC Liquor Stores'}) 0.07291666666666667
+frozenset({'Food'}) 0.10416666666666667
+frozenset({'Recreation'}) 0.10416666666666667
+frozenset({'Halifax, NS'}) 0.052083333333333336
+frozenset({'Retail'}) 0.10416666666666667
+frozenset({'Seasonal Store Advisor (3 month opportunity)'}) 0.03125
+frozenset({'Publishing'}) 0.10416666666666667
+frozenset({'Burnaby, BC'}) 0.07291666666666667
+frozenset({'Cosma International'}) 0.0625
+frozenset({'Northwestel'}) 0.041666666666666664
+frozenset({'Winnipeg, MB'}) 0.03125
+frozenset({'Montreal, QC'}) 0.041666666666666664
+frozenset({'University Health Network'}) 0.052083333333333336
+frozenset({'Milton, ON'}) 0.0625
+frozenset({'Wholesale'}) 0.10416666666666667
+frozenset({'Mississauga, ON'}) 0.03125
+frozenset({'Hosting'}) 0.10416666666666667
+frozenset({'Broadcasting'}) 0.041666666666666664
+frozenset({'Danaher'}) 0.03125
+frozenset({'Recording'}) 0.10416666666666667
+frozenset({'Jasper, AB'}) 0.03125
+frozenset({'Edmonton, AB'}) 0.03125
+frozenset({'Eastlink'}) 0.0625
+frozenset({'Telecommunications'}) 0.10416666666666667
+frozenset({'Forklift Operator'}) 0.052083333333333336
+frozenset({'Producer'}) 0.03125
+frozenset({'CBI Health Group'}) 0.041666666666666664
+==================================================
+frequent 2-itemsets		support
+==================================================
+frozenset({'BC Liquor Stores', 'Burnaby, BC'}) 0.07291666666666667
+frozenset({'Hosting', 'Pursuit Collection'}) 0.03125
+frozenset({'Retail', 'Seasonal Store Advisor (3 month opportunity)'}) 0.03125
+frozenset({'Nutrition Aide (Food Delivery)', 'Toronto, ON'}) 0.03125
+frozenset({'Toronto, ON', 'University Health Network'}) 0.052083333333333336
+frozenset({'Recreation', 'Vancouver, BC'}) 0.03125
+frozenset({'Danaher', 'Recreation'}) 0.03125
+frozenset({'Nutrition Aide (Food Delivery)', 'Food'}) 0.03125
+frozenset({'Jasper, AB', 'Hosting'}) 0.03125
+frozenset({'BC Liquor Stores', 'Wholesale'}) 0.07291666666666667
+frozenset({'Telecommunications', 'Northwestel'}) 0.041666666666666664
+frozenset({'Forklift Operator', 'Milton, ON'}) 0.052083333333333336
+frozenset({'Jasper, AB', 'Pursuit Collection'}) 0.03125
+frozenset({'Publishing', 'CBI Health Group'}) 0.041666666666666664
+frozenset({'Forklift Operator', 'Cosma International'}) 0.052083333333333336
+frozenset({'Food', 'University Health Network'}) 0.052083333333333336
+frozenset({'Wholesale', 'Burnaby, BC'}) 0.07291666666666667
+frozenset({'Broadcasting', 'Eastlink'}) 0.03125
+frozenset({'Milton, ON', 'Recording'}) 0.0625
+frozenset({'Retail', 'Mountain Equipment Co-op'}) 0.07291666666666667
+frozenset({'Seasonal Store Advisor (3 month opportunity)', 'Mountain Equipment Co-op'}) 0.03125
+frozenset({'Cosma International', 'Recording'}) 0.0625
+frozenset({'Food', 'Toronto, ON'}) 0.052083333333333336
+frozenset({'Milton, ON', 'Cosma International'}) 0.0625
+frozenset({'Nutrition Aide (Food Delivery)', 'University Health Network'}) 0.03125
+frozenset({'Producer', 'Eastlink'}) 0.03125
+frozenset({'Forklift Operator', 'Recording'}) 0.052083333333333336
+frozenset({'Danaher', 'Vancouver, BC'}) 0.03125
+==================================================
+frequent 3-itemsets		support
+==================================================
+frozenset({'Forklift Operator', 'Cosma International', 'Recording'}) 0.052083333333333336
+frozenset({'Forklift Operator', 'Milton, ON', 'Cosma International'}) 0.052083333333333336
+frozenset({'Jasper, AB', 'Hosting', 'Pursuit Collection'}) 0.03125
+frozenset({'Nutrition Aide (Food Delivery)', 'Food', 'Toronto, ON'}) 0.03125
+frozenset({'Retail', 'Mountain Equipment Co-op', 'Seasonal Store Advisor (3 month opportunity)'}) 0.03125
+frozenset({'Milton, ON', 'Cosma International', 'Recording'}) 0.0625
+frozenset({'Forklift Operator', 'Milton, ON', 'Recording'}) 0.052083333333333336
+frozenset({'Food', 'Toronto, ON', 'University Health Network'}) 0.052083333333333336
+frozenset({'Danaher', 'Vancouver, BC', 'Recreation'}) 0.03125
+frozenset({'Nutrition Aide (Food Delivery)', 'Food', 'University Health Network'}) 0.03125
+frozenset({'BC Liquor Stores', 'Wholesale', 'Burnaby, BC'}) 0.07291666666666667
+frozenset({'Nutrition Aide (Food Delivery)', 'Toronto, ON', 'University Health Network'}) 0.03125
+
+Association Rules
+frozenset({'Burnaby, BC'}) => frozenset({'BC Liquor Stores'}) conf =  1.0
+frozenset({'BC Liquor Stores'}) => frozenset({'Burnaby, BC'}) conf =  1.0
+frozenset({'Pursuit Collection'}) => frozenset({'Hosting'}) conf =  1.0
+frozenset({'Seasonal Store Advisor (3 month opportunity)'}) => frozenset({'Retail'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)'}) => frozenset({'Toronto, ON'}) conf =  1.0
+frozenset({'University Health Network'}) => frozenset({'Toronto, ON'}) conf =  1.0
+frozenset({'Danaher'}) => frozenset({'Recreation'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)'}) => frozenset({'Food'}) conf =  1.0
+frozenset({'Jasper, AB'}) => frozenset({'Hosting'}) conf =  1.0
+frozenset({'BC Liquor Stores'}) => frozenset({'Wholesale'}) conf =  1.0
+frozenset({'Northwestel'}) => frozenset({'Telecommunications'}) conf =  1.0
+frozenset({'Forklift Operator'}) => frozenset({'Milton, ON'}) conf =  1.0
+frozenset({'Jasper, AB'}) => frozenset({'Pursuit Collection'}) conf =  1.0
+frozenset({'Pursuit Collection'}) => frozenset({'Jasper, AB'}) conf =  1.0
+frozenset({'CBI Health Group'}) => frozenset({'Publishing'}) conf =  1.0
+frozenset({'Forklift Operator'}) => frozenset({'Cosma International'}) conf =  1.0
+frozenset({'University Health Network'}) => frozenset({'Food'}) conf =  1.0
+frozenset({'Burnaby, BC'}) => frozenset({'Wholesale'}) conf =  1.0
+frozenset({'Milton, ON'}) => frozenset({'Recording'}) conf =  1.0
+frozenset({'Mountain Equipment Co-op'}) => frozenset({'Retail'}) conf =  1.0
+frozenset({'Seasonal Store Advisor (3 month opportunity)'}) => frozenset({'Mountain Equipment Co-op'}) conf =  1.0
+frozenset({'Cosma International'}) => frozenset({'Recording'}) conf =  1.0
+frozenset({'Milton, ON'}) => frozenset({'Cosma International'}) conf =  1.0
+frozenset({'Cosma International'}) => frozenset({'Milton, ON'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)'}) => frozenset({'University Health Network'}) conf =  1.0
+frozenset({'Producer'}) => frozenset({'Eastlink'}) conf =  1.0
+frozenset({'Forklift Operator'}) => frozenset({'Recording'}) conf =  1.0
+frozenset({'Danaher'}) => frozenset({'Vancouver, BC'}) conf =  1.0
+frozenset({'Forklift Operator', 'Recording'}) => frozenset({'Cosma International'}) conf =  1.0
+frozenset({'Forklift Operator', 'Cosma International'}) => frozenset({'Recording'}) conf =  1.0
+frozenset({'Forklift Operator'}) => frozenset({'Cosma International', 'Recording'}) conf =  1.0
+frozenset({'Forklift Operator', 'Milton, ON'}) => frozenset({'Cosma International'}) conf =  1.0
+frozenset({'Forklift Operator', 'Cosma International'}) => frozenset({'Milton, ON'}) conf =  1.0
+frozenset({'Forklift Operator'}) => frozenset({'Milton, ON', 'Cosma International'}) conf =  1.0
+frozenset({'Jasper, AB', 'Hosting'}) => frozenset({'Pursuit Collection'}) conf =  1.0
+frozenset({'Jasper, AB', 'Pursuit Collection'}) => frozenset({'Hosting'}) conf =  1.0
+frozenset({'Hosting', 'Pursuit Collection'}) => frozenset({'Jasper, AB'}) conf =  1.0
+frozenset({'Jasper, AB'}) => frozenset({'Hosting', 'Pursuit Collection'}) conf =  1.0
+frozenset({'Pursuit Collection'}) => frozenset({'Jasper, AB', 'Hosting'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)', 'Food'}) => frozenset({'Toronto, ON'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)', 'Toronto, ON'}) => frozenset({'Food'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)'}) => frozenset({'Food', 'Toronto, ON'}) conf =  1.0
+frozenset({'Retail', 'Seasonal Store Advisor (3 month opportunity)'}) => frozenset({'Mountain Equipment Co-op'}) conf =  1.0
+frozenset({'Seasonal Store Advisor (3 month opportunity)', 'Mountain Equipment Co-op'}) => frozenset({'Retail'}) conf =  1.0
+frozenset({'Seasonal Store Advisor (3 month opportunity)'}) => frozenset({'Retail', 'Mountain Equipment Co-op'}) conf =  1.0
+frozenset({'Milton, ON', 'Recording'}) => frozenset({'Cosma International'}) conf =  1.0
+frozenset({'Cosma International', 'Recording'}) => frozenset({'Milton, ON'}) conf =  1.0
+frozenset({'Milton, ON', 'Cosma International'}) => frozenset({'Recording'}) conf =  1.0
+frozenset({'Cosma International'}) => frozenset({'Milton, ON', 'Recording'}) conf =  1.0
+frozenset({'Milton, ON'}) => frozenset({'Cosma International', 'Recording'}) conf =  1.0
+frozenset({'Forklift Operator', 'Recording'}) => frozenset({'Milton, ON'}) conf =  1.0
+frozenset({'Forklift Operator', 'Milton, ON'}) => frozenset({'Recording'}) conf =  1.0
+frozenset({'Forklift Operator'}) => frozenset({'Milton, ON', 'Recording'}) conf =  1.0
+frozenset({'Food', 'University Health Network'}) => frozenset({'Toronto, ON'}) conf =  1.0
+frozenset({'Toronto, ON', 'University Health Network'}) => frozenset({'Food'}) conf =  1.0
+frozenset({'Food', 'Toronto, ON'}) => frozenset({'University Health Network'}) conf =  1.0
+frozenset({'University Health Network'}) => frozenset({'Food', 'Toronto, ON'}) conf =  1.0
+frozenset({'Danaher', 'Recreation'}) => frozenset({'Vancouver, BC'}) conf =  1.0
+frozenset({'Danaher', 'Vancouver, BC'}) => frozenset({'Recreation'}) conf =  1.0
+frozenset({'Recreation', 'Vancouver, BC'}) => frozenset({'Danaher'}) conf =  1.0
+frozenset({'Danaher'}) => frozenset({'Recreation', 'Vancouver, BC'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)', 'University Health Network'}) => frozenset({'Food'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)', 'Food'}) => frozenset({'University Health Network'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)'}) => frozenset({'Food', 'University Health Network'}) conf =  1.0
+frozenset({'Wholesale', 'Burnaby, BC'}) => frozenset({'BC Liquor Stores'}) conf =  1.0
+frozenset({'BC Liquor Stores', 'Wholesale'}) => frozenset({'Burnaby, BC'}) conf =  1.0
+frozenset({'BC Liquor Stores', 'Burnaby, BC'}) => frozenset({'Wholesale'}) conf =  1.0
+frozenset({'Burnaby, BC'}) => frozenset({'BC Liquor Stores', 'Wholesale'}) conf =  1.0
+frozenset({'BC Liquor Stores'}) => frozenset({'Wholesale', 'Burnaby, BC'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)', 'University Health Network'}) => frozenset({'Toronto, ON'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)', 'Toronto, ON'}) => frozenset({'University Health Network'}) conf =  1.0
+frozenset({'Nutrition Aide (Food Delivery)'}) => frozenset({'Toronto, ON', 'University Health Network'}) conf =  1.0

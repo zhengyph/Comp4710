@@ -1,35 +1,48 @@
-# COMP4710
+# COMP 4710 Project
+Author:
+    Yan Wen
+    Joshua Smallwood
+    Chenru Zhao
+    Hao Zheng
+    
+## Jobs data:
+  https://www.hrjob.ca
+  https://www.jobwings.ca/en/
+  https://www.pmjobs.ca/
+  https://www.legaljobs.ca/
+  https://www.paralegaljobs.ca/
+  https://www.salesrep.ca/en/
+  https://www.itjobs.ca/en/
+  https://www.retail.ca/
+  https://www.callcentrejob.ca/
+  https://www.adminjobs.ca/en/
+  https://www.techjobs.ca/en/
+  https://www.accountingjobs.ca/
+  https://www.bajobs.ca/en/
+  https://www.pharmaceutical.ca/
+  https://www.healthcarejobs.ca/
+  https://www.aerojobs.ca/en/
+  https://www.hospitalityjobs.ca/en/
+  https://www.jobs.ca/search/?keywords={}
+  https://ca.indeed.com/jobs?q={}&l=canada
+  https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring={}&locationstring=&sort=M
+  
+## Compile and Run
+  
+  ### package used:
+  pandas
+  
+  numpy
+  
+  ### first run (If you would like to parse data from websites)
+       python jobs_dot_ca_downloader.py
+       python jobs_dot_ca_search_downloader.py
+       python job_count_avg.py
 
-All infomation below are temprary and requires further changes.<br>
-Any changes can be done after group discussion.<br>
-All rights reserved by Group 11 COMP4710 fall 2020, University of Manitoba<br>
+### second run
+      python rem_dup_dataset.py
+Try to remove duplicates in the dataset to prepare for applying algorithm
 
-
-Candidate topic #1: An application of data mining in analyzing the job market of COVID (recommended by Carson).<br>
-
-1st level data may requires mining:<br>
-1) work experience (student/graduate/1-3/3-5/5+)<br>
-2) level/rank of jobs (intern/junior/senior/...)<br>
-3) distribution among major cities in Canada (we may need to discuss which cities should be included, i.e. top # based on population, etc.)<br>
-4) Education (need to decide whether or not include any requires Master's degree. Phd is not considered in this research)<br>
-2nd level data may requires mining:<br>
-5) annual/monthly salaries - requires 1) 2) and maybe 3) 4). <br>
-
-From Carson:<br>
-we need to consider broaden the scope to other social aspects impacted by COVID - need discussions <br>
-in addition to front-end visualization, we need back end mining engine to support vis and provide info for vis.<br>
-
-Temp list of tasks:<br>
-Note: We better can generate conclusions from each pattern/relation.<br>
-1. How many categories do IT jobs have? What is the percentage of each? What is the geographic distrubution?<br>
-2. How many ranks do IT jobs have? What is the relation between rank/required exp, rank/salary, rank/required edu?<br>
-3. What is the relation between salary and experience/job level/education? (control the geographic factor?)
-4. Consider all other factors are same, how much does the geographic factor will affect the salary? (could have a geographic distrubution?)
-5. Among all jobs posted by Canadian government, how many % of them are IT related? Is it showing a growth or decline?<br>
-6. How did the COVID affect the IT job market? What were changed between before/after the outbreak?<br>
-7. How many IT jobs of all allows remote work? What about comparing with other kind of jobs?<br>
-8. What is the trend for IT jobs in the future? eg. predict number of jobs (by categories/ranks)
-9. Mining the frequent patterns with all factors above? (not a 1-to-1 relationship)
-etc. need update<br>
-
-
+### third run
+      python apriori.py
+There are two csv files, please uncomment the file that you would like to do frequent pattern mining on. You need to do frequent pattern mining on both of them to get our result.
