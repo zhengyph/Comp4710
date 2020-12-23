@@ -1,8 +1,11 @@
 # COMP 4710 Project
 Author:
     Yan Wen
+    
     Joshua Smallwood
+    
     Chenru Zhao
+    
     Hao Zheng
     
 ## Jobs data:
