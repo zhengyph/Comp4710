@@ -34,7 +34,9 @@ Group Members:
 ## Links to datasets
   - [North American Industry Classification System (NAICS) Canada 2017 Version 3.0.](https://www23.statcan.gc.ca/imdb/p3VD.pl?Function=getVD&TVD=1181553)
   - [Employment by industry, monthly, seasonally adjusted and unadjusted, and trend-cycle, last 5 months (x 1,000)](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410035501&pickMembers%5B0%5D=1.1&pickMembers%5B1%5D=3.1&pickMembers%5B2%5D=4.1&cubeTimeFrame.startMonth=01&cubeTimeFrame.startYear=2018&cubeTimeFrame.endMonth=11&cubeTimeFrame.endYear=2020&referencePeriods=20180101%2C20201101)
-  
+  - [job_count.csv](https://github.com/hypzheng/COMP4710/blob/main/job_count.csv)
+  - [jobs_dot_ca_output.csv](https://github.com/hypzheng/COMP4710/blob/main/jobs_dot_ca_output.csv)
+  - [jobs_dot_ca_search_output.csv](https://github.com/hypzheng/COMP4710/blob/main/jobs_dot_ca_search_output.csv)
 ## Compile and Run
   
   ### packages used:
