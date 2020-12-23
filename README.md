@@ -10,33 +10,34 @@ Author:
     Hao Zheng
     
 ## Jobs data:
-  https://www.hrjob.ca
-  https://www.jobwings.ca/en/
-  https://www.pmjobs.ca/
-  https://www.legaljobs.ca/
-  https://www.paralegaljobs.ca/
-  https://www.salesrep.ca/en/
-  https://www.itjobs.ca/en/
-  https://www.retail.ca/
-  https://www.callcentrejob.ca/
-  https://www.adminjobs.ca/en/
-  https://www.techjobs.ca/en/
-  https://www.accountingjobs.ca/
-  https://www.bajobs.ca/en/
-  https://www.pharmaceutical.ca/
-  https://www.healthcarejobs.ca/
-  https://www.aerojobs.ca/en/
-  https://www.hospitalityjobs.ca/en/
-  https://www.jobs.ca/search/?keywords={}
-  https://ca.indeed.com/jobs?q={}&l=canada
-  https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring={}&locationstring=&sort=M
+  - https://www.jobs.ca/
+  - https://www.hrjob.ca
+  - https://www.jobwings.ca/en/
+  - https://www.pmjobs.ca/
+  - https://www.legaljobs.ca/
+  - https://www.paralegaljobs.ca/
+  - https://www.salesrep.ca/en/
+  - https://www.itjobs.ca/en/
+  - https://www.retail.ca/
+  - https://www.callcentrejob.ca/
+  - https://www.adminjobs.ca/en/
+  - https://www.techjobs.ca/en/
+  - https://www.accountingjobs.ca/
+  - https://www.bajobs.ca/en/
+  - https://www.pharmaceutical.ca/
+  - https://www.healthcarejobs.ca/
+  - https://www.aerojobs.ca/en/
+  - https://www.hospitalityjobs.ca/en/
+  - https://ca.indeed.com/jobs?l=canada
+  - https://www.jobbank.gc.ca/jobsearch/jobsearch?locationstring=&sort=M
   
 ## Compile and Run
   
-  ### package used:
-  pandas
-  
-  numpy
+  ### packages used:
+  - pandas
+  - numpy
+  - requests
+  - beautifulsoup
   
   ### first run (If you would like to parse data from websites)
        python jobs_dot_ca_downloader.py
