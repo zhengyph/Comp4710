@@ -1,13 +1,13 @@
-# COMP 4710 Project
-Author:
+# COMP 4710 Project - Group 11
+Group Members:
     
-    Yan Wen
+    Yan Wen 7848205
     
-    Joshua Smallwood
+    Joshua Smallwood 7826555
     
-    Chenru Zhao
+    Chenru Zhao 7830959
     
-    Hao Zheng
+    Hao Zheng 7870389
     
 ## Jobs data:
   - https://www.jobs.ca/
@@ -31,6 +31,8 @@ Author:
   - https://ca.indeed.com/jobs?l=canada
   - https://www.jobbank.gc.ca/jobsearch/jobsearch?locationstring=&sort=M
   
+## Links to our csv file
+  
 ## Compile and Run
   
   ### packages used:
@@ -50,4 +52,4 @@ Try to remove duplicates in the dataset to prepare for applying algorithm
 
 ### third run
       python apriori.py
-There are two csv files, please uncomment the file that you would like to do frequent pattern mining on. You need to do frequent pattern mining on both of them to get our result.
+There are two csv files, please uncomment the file that you would like to do frequent pattern mining on. You need to do frequent pattern mining on both of them to get our final result.
