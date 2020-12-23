@@ -55,3 +55,7 @@ Try to remove duplicates in the dataset to prepare for applying algorithm
 ### third run
       python apriori.py
 There are two csv files, please uncomment the file that you would like to do frequent pattern mining on. You need to do frequent pattern mining on both of them to get our final result.
+
+The apriori_output.txt is the result of applying apriori algorithm on jobs_dot_ca_output.csv which parsed through jobs_dot_ca_downloader.py.
+
+The apriori_output2.txt is the result of applying apriori algorithmon on jobs_dot_ca_search_output.csv which parsed through jobs_dot_ca_search_downloader.py.
